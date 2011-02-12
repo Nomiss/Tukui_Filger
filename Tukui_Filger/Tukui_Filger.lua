@@ -3,6 +3,7 @@
 	Filger
 	Copyright (c) 2009, Nils Ruesch
 	All rights reserved.
+	Edit by: Nomiss, Copypased from virance
 
 ]]
 
@@ -35,7 +36,18 @@ local function OnUpdate(self, elapsed)
 	if (time < 0 and self.filter == "CD") then
 		local id = self:GetParent().Id;
 		for index, value in ipairs(active[id]) do
-			local spn = GetSpellInfo(value.data.spellID or value.data.slotID)
+			-- local spn = GetSpellInfo(value.data.spellID or value.data.slotID) [Test for CD]
+			
+			local spn, slotLink
+			if value.data.spellID then
+				spn = GetSpellInfo( value.data.spellID )
+			elseif value.data.slotID then
+				slotLink = GetInventoryItemLink("player", value.data.slotID);
+				if ( slotLink ) then
+					spn, _, _, _, _, _, _, _, _, icon = GetItemInfo(slotLink);
+				end
+			end
+			
 			if (self.spellName == spn) then
 				tremove(active[id], index);
 				break;
@@ -56,6 +68,7 @@ function Update(self)
 	end
 	local bar;
 	for index, value in ipairs(active[id]) do
+		local printedID = value.data.spellID or value.data.slotID -- Added
 		bar = bars[id][index];
 		if (not bar) then
 			bar = CreateFrame("Frame", "FilgerAnchor"..id.."Frame"..index, self);
@@ -167,12 +180,24 @@ function Update(self)
 			tinsert(bars[id], bar);
 		end
 		
-		bar.spellName = GetSpellInfo( value.data.spellID or value.data.slotID );
-		
+		-- bar.spellName = GetSpellInfo( value.data.spellID or value.data.slotID );
+		local spn, slotLink
+		if value.data.spellID then
+			spn = GetSpellInfo( value.data.spellID )
+		elseif value.data.slotID then
+			slotLink = GetInventoryItemLink("player", value.data.slotID);
+			if ( slotLink ) then
+				spn, _, _, _, _, _, _, _, _, icon = GetItemInfo(slotLink);
+			end
+		end
+		--print (spn)
+		bar.spellName = spn
+
 		bar.icon:SetTexture(value.icon);
 		bar.count:SetText(value.count > 1 and value.count or "");
 		if (self.Mode == "BAR") then
-			bar.spellname:SetText(value.data.displayName or GetSpellInfo( value.data.spellID ));
+			-- bar.spellname:SetText(value.data.displayName or GetSpellInfo( value.data.spellID ));
+			bar.spellname:SetText("Temp");
 		end
 		if (value.duration > 0) then
 			if (self.Mode == "ICON") then
@@ -240,13 +265,20 @@ local function OnEvent(self, event, ...)
 				active[id] = {};
 			end
 			for index, value in ipairs(active[id]) do
-				if (data.spellID == value.data.spellID) then
+				if data.spellID and data.spellID == value.data.spellID then
 					tremove(active[id], index);
-					break;
+				elseif data.slotID and data.slotID == value.data.slotID then
+					tremove(active[id], index);
 				end
 			end
-			if ( ( name and ( data.caster ~= 1 and ( caster == data.caster or data.caster == "all" ) or MyUnits[caster] )) or ( ( enabled or 0 ) > 0 and ( duration or 0 ) > 1.5 ) ) then
+			if duration == 0 or enabled == 0 then
+				-- print("duration: " .. duration .. ", enabled: " .. enabled)
+			elseif ( ( name and ( data.caster ~= 1 and ( caster == data.caster or data.caster == "all" ) or MyUnits[caster] )) or ( ( enabled or 0 ) > 0 and ( duration or 0 ) > 1.5 ) ) then
+				local tempVar = expirationTime or start
+				--print("Adding active: " .. id .. " count: " .. count .. " duration: " .. duration .. " expirationTime " .. tempVar)
+				--print (#active[id])
 				table.insert(active[id], { data = data, icon = icon, count = count, duration = duration, expirationTime = expirationTime or start });
+				--print (#active[id])
 			end
 		end
 		Update(self);
@@ -257,9 +289,28 @@ if (Filger_Spells and Filger_Spells["ALL"]) then
 	if (not Filger_Spells[class]) then
 		Filger_Spells[class] = {}
 	end
-
+	local didMerge
 	for i = 1, #Filger_Spells["ALL"], 1 do
-		table.insert(Filger_Spells[class], Filger_Spells["ALL"][i])
+		didMerge = false
+		for j = 1, #Filger_Spells[class], 1 do
+			local baseTable = Filger_Spells[class][j]
+			local addTable = Filger_Spells["ALL"][i]
+			if baseTable["Name"] and addTable["Name"] and baseTable["Name"] == addTable["Name"] then
+
+				for k = 1, #addTable, 1 do
+					if addTable[k].spellID or addTable[k].slotID or addTable[k].itemID then
+						local printedInfo = addTable[k].spellID or addTable[k].slotID or addTable[k].itemID
+						table.insert(baseTable, addTable[k])
+					end
+				end
+
+				didMerge =true
+			end
+		end
+
+		if not didMerge then
+			table.insert(Filger_Spells[class], Filger_Spells["ALL"][i])
+		end
 	end
 end
 
