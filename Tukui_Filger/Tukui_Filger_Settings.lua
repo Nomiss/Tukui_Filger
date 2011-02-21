@@ -232,17 +232,17 @@ ns.Filger_Spells = {
 			-- Clearcasting
 			{ spellID = 12536, size = 47, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Impact
-			{ spellID = 12358, size = 47, unitId = "player", caster = "player", filter = "BUFF" },
+			--{ spellID = 12358, size = 47, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
-			Name = "T_DEBUFF_ICON",
+			Name = "T_DEBUFF_ICON_BIG",
 			Direction = "RIGHT",
 			Interval = 4,
 			Mode = "ICON",
 			setPoint = { "LEFT", UIParent, "CENTER", 160, -20 },
 
 			-- Polymorph
-			{ spellID = 118, size = 47, unitId = "target", caster = "all", filter = "DEBUFF" },
+			--{ spellID = 118, size = 47, unitId = "target", caster = "all", filter = "DEBUFF" },
 			-- Arcane Blast
 			{ spellID = 36032, size = 47, unitId = "player", caster = "player", filter = "DEBUFF" },
 			-- Improved Scorch
@@ -258,6 +258,24 @@ ns.Filger_Spells = {
 			-- Pyroblast!
 			{ spellID = 92315, size = 47, unitId = "player", caster = "player", filter = "DEBUFF" },
 		},
+		
+		{
+			Name = "T_DEBUFF_ICON_SMALL",
+			Direction = "RIGHT",
+			Interval = 4,
+			Mode = "ICON",
+			setPoint = { "LEFT", UIParent, "CENTER", 160, 27 },
+
+			-- Pyroblast
+			{ spellID = 11366, size = 27, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- Pyroblast!
+			{ spellID = 92315, size = 27, unitId = "target", caster = "player", filter = "DEBUFF" },
+			-- Critical Mass
+			{ spellID = 22959, size = 27, unitId = "target", caster = "player", filter = "DEBUFF" },
+			
+			
+		},
+		
 		{
 			Name = "F_DEBUFF_BAR",
 			Direction = "UP",
@@ -269,6 +287,23 @@ ns.Filger_Spells = {
 			-- Polymorph
 			{ spellID = 118, size = 32, barWidth = 191, unitId = "focus", caster = "all", filter = "DEBUFF" },
 		},
+		
+		{
+			Name = "P_CDs",
+			Direction = "RIGHT",
+			Interval = 4,
+			Mode = "ICON",
+			setPoint = { "LEFT", UIParent, "CENTER", 198, -240 },
+			
+			-- Fire Orb
+			{ spellID = 82739, size = 32, filter = "CD" },
+			-- Combustion
+			{ spellID = 11129, size = 32, filter = "CD" },
+			
+			
+			
+		},
+		
 	},
 	["WARRIOR"] = {
 		{
@@ -284,6 +319,8 @@ ns.Filger_Spells = {
 			{ spellID = 46916, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
 			-- Sword and Board
 			{ spellID = 50227, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Thunderstruck
+			{ spellID = 87096, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
 			
 			
 		},
@@ -321,6 +358,8 @@ ns.Filger_Spells = {
 			{ spellID = 1715, size = 47, unitId = "target", caster = "all", filter = "DEBUFF" },
 			-- Sunder Armor
 			{ spellID = 7386, size = 47, unitId = "target", caster = "all", filter = "DEBUFF" },
+			-- Collosus Smash
+			{ spellID = 86346, size = 47, unitId = "target", caster = "player", filter = "DEBUFF" },
 			-- Piercing Howl
 			{ spellID = 12323, size = 47, unitId = "target", caster = "all", filter = "DEBUFF" },
 		},
