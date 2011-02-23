@@ -299,7 +299,10 @@ ns.Filger_Spells = {
 			{ spellID = 82739, size = 32, filter = "CD" },
 			-- Combustion
 			{ spellID = 11129, size = 32, filter = "CD" },
-			
+			-- Deep Freeze
+			{ spellID = 44572, size = 32, filter = "CD" },
+			-- Freeze - Water Elemental
+			{ spellID = 33395, size = 32, filter = "CD" },
 			
 			
 		},
