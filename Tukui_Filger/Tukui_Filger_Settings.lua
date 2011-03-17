@@ -232,7 +232,7 @@ ns.Filger_Spells = {
 			-- Clearcasting
 			{ spellID = 12536, size = 47, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Impact
-			--{ spellID = 12358, size = 47, unitId = "player", caster = "player", filter = "BUFF" },
+			{ spellID = 12358, size = 47, unitId = "player", caster = "player", filter = "BUFF" },
 		},
 		{
 			Name = "T_DEBUFF_ICON_BIG",
@@ -341,14 +341,16 @@ ns.Filger_Spells = {
 			{ spellID = 871, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Hand of Sacrifice (Paladin)
 			{ spellID = 6940, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
-			-- Pain Suppression - Disc Priest
+			-- Pain Suppression (Disc Priest)
 			{ spellID = 63877, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
-			-- Guardian Spirit (Holy)
+			-- Guardian Spirit (Holy Priest)
 			{ spellID = 47788, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
-			--Power Word: Barrier
+			--Power Word: Barrier (Disc Priest)
 			{ spellID = 62618, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
-			-- Divine Guardian
+			-- Divine Guardian (Paladin)
 			{ spellID = 70940, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
+			
+			
 			
 		},
 		{
@@ -877,6 +879,9 @@ ns.Filger_Spells = {
 			{ spellID = 92222, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
 			-- Memory of Invincibility - Normal
 			{ spellID = 92213, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
+			
+			-- Hand of Protection (Paladin)
+			{ spellID = 1022, size = 64, unitId = "player", caster = "all", filter = "BUFF" },
 
 			-- Hyperspeed Accelerators
 			{ spellID = 54758, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
@@ -887,6 +892,8 @@ ns.Filger_Spells = {
 			{ spellID = 53908, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Wild Magic
 			{ spellID = 53909, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Earthen Potion
+			{ spellID = 58090, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
 
 			--Tricks of the Trade
 			{ spellID = 57934, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
@@ -1143,187 +1150,189 @@ ns.Filger_Spells = {
 			-- Blackrock Caverns
 			-- Corla, Herald of Twilight // Normalmode
 			-- Dark Command
-			-- { spellID = 75823, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- { spellID = 75823, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Corla, Herald of Twilight
 			-- Dark Command
-			{ spellID = 93462, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93462, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Beauty
 			-- Magma Spit
-			{ spellID = 76031, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 76031, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Ascendant Lord Obsidius
 			-- Thunderclap 50% run speed
-			{ spellID = 76186, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 76186, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Crepuscular Veil
-			{ spellID = 76189, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 76189, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Grim Batol
 			-- General Umbriss
 			-- Bleeding Wound normal
-			--{ spellID = 91937, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			--{ spellID = 91937, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Bleeding Wound
-			{ spellID = 74846, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 74846, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Erudax
 			-- Binding Shadows normal
-			--{ spellID = 91081, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			--{ spellID = 91081, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Binding Shadows
-			{ spellID = 79466, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 79466, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Halls of Origination
 			-- Anraphet
 			-- Crumbling Ruin normal
-			--{ spellID = 75609, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			--{ spellID = 75609, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Crumbling Ruin
-			{ spellID = 91206, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 91206, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Ammunae
 			-- Wither
-			{ spellID = 76043, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 76043, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- The Stonecore
 			-- Corborus
 			-- Dampening Wave normal
-			-- { spellID = 82415, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- { spellID = 82415, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Dampening Wave
-			{ spellID = 92650, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 92650, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Azil
 			-- Curse of Blood normal
-			-- {spellID = 79345, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- {spellID = 79345, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Curse of Blood
-			{ spellID = 92663, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 92663, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Throne of Tides
 			-- Lady Naz'jar
 			-- Fungal Spores normal
-			-- { spellID = 91470, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- { spellID = 91470, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Commander Ulthok
 			-- Curse of Fatique
-			{ spellID = 76094, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 76094, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Squeeze normal
-			--{ spellID = 76026, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			--{ spellID = 76026, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Squeeze
-			{ spellID = 91484, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 91484, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Erunak Stonespeaker
 			-- Enslave normal
-			--{ spellID = 91413, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			--{ spellID = 91413, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Enslave
-			{ spellID = 76207, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 76207, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Ozumat
 			-- Veil of Shadow
-			{ spellID = 83926, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 83926, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Vortex Pinnacle
 			-- Altairus
 			-- Downwind of Altairus
-			{ spellID = 88286, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 88286, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Upwind of Altairus
-			{ spellID = 88282, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 88282, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Asaad
 			-- Static Cling
-			{ spellID = 87618, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 87618, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Lost City of the Tol'vir
 			-- Lockmaw
 			-- Viscous Poison normal
-			--{ spellID = 81630, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			--{ spellID = 81630, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Viscous Poison
-			{ spellID = 90004, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 90004, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Paralytic Blow Dart
-			{ spellID = 89989, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 89989, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Heroic Deadmines
 			-- "Captain" Cookie
 			-- Nauseated
-			{ spellID = 92066, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 92066, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Satiated
-			{ spellID = 92834, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 92834, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Shadowfang Keep Heroic
 			-- Baron Ashbury
 			-- Asphyxiate
-			{ spellID = 93710, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93710, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Stay of Execution
-			{ spellID = 93705, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93705, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Pain & Suffering
-			{ spellID = 93712, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93712, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Wracking Pain
-			{ spellID = 93720, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93720, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Baron Silverlaine
 			-- Cursed Veil
-			{ spellID = 93956, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93956, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Soul Drain
-			{ spellID = 93920, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93920, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Commander Springvale
 			-- Desecration
-			{ spellID = 93687, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93687, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Word of Shame
-			{ spellID = 93852, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93852, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Lord Walden
 			-- Toxic Catalyst
-			{ spellID = 93689, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93689, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Lord Godfrey Ghul
 			-- Mortal Wound
-			{ spellID = 93771, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 93771, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			
 			-- CATA RAID
 			
 			-- Baradin Hold(PvP)
 			-- Meteor Slash/Meteorschlag (Argaloth)
-			{ spellID = 88942, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 88942, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 
 			-- Bastion of Twilight
 			-- Blackout (Valiona & Theralion)
-			{ spellID = 92878, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 92878, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Engulfing Magic (Valiona & Theralion)
-			{ spellID = 95639, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 95639, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			
 			-- Waterlogged(Twilight Ascendant Council)
-			{ spellID = 82762, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 82762, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Burning Blood (Twilight Ascendant Council)
-			{ spellID = 82660, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 82660, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Heart of Ice (Twilight Ascendant Council)
-			{ spellID = 82665, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 82665, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Frozen (Twilight Ascendant Council)
-			{ spellID = 92505, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 92505, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Swirling Winds (Twilight Ascendant Council)
-			{ spellID = 83500, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 83500, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Magnetic Pull (Twilight Ascendant Council)
-			{ spellID = 83587, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 83587, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			
 			-- Corruption: Accelerated(Cho'gall)
-			{ spellID = 81836, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 81836, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Corruption: Malformation (Cho'gall)
-			{ spellID = 82125, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 82125, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Corruption: Absolute (Cho'gall)
-			{ spellID = 82170, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 82170, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Corruption: Sickness (Cho'gall)
-			{ spellID = 81831, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 81831, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 
 			-- Blackwing Descent
 			-- Constricting Chains (Magmaw)
-			{ spellID = 91911, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 91911, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Parasitic Infection (Magmaw)
-			{ spellID = 94679, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 94679, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Infectious Vomit (Magmaw)
-			{ spellID = 91923, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
-			-- Mangle
-			{ spellID = 89773, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 91923, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Mangle (Magmaw)
+			{ spellID = 89773, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			
 			-- Lightning Conductor (Omnitron Defense System)
-			{ spellID = 91433, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			{ spellID = 91433, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Unstable Shield (Omnitron Defense System)
-			{ spellID = 79900, size = 72, unitId = "target", caster = "all", filter = "BUFF" },
+			{ spellID = 79900, size = 58, unitId = "target", caster = "all", filter = "BUFF" },
 			-- Poison Soaked Shell (Omnitron Defense System)
-			{ spellID = 91501, size = 72, unitId = "target", caster = "all", filter = "BUFF" },
+			{ spellID = 91501, size = 58, unitId = "target", caster = "all", filter = "BUFF" },
 			
-			-- Flash Freeze/Blitzeis (Maloriak)
-			{ spellID = 77699, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
-			-- Consuming Flames/Verzehrende Flammen (Maloriak)
-			{ spellID = 77786, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Flash Freeze (Maloriak)
+			{ spellID = 77699, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Consuming Flames (Maloriak)
+			{ spellID = 77786, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			
-			-- Finkle's Mixture/Finkels Mixtur (Chimaeron)
-			{ spellID = 82705, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Finkle's Mixture (Chimaeron)
+			{ spellID = 82705, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Dubble Attack (Chimaeron)
+			{ spellID = 88826, size = 58, unitId = "target", caster = "all", filter = "BUFF" },
 			
-			-- Shadow Conductor/Schattenleiter (Nefarian)
-			{ spellID = 92053, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Shadow Conductor (Nefarian)
+			{ spellID = 92053, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 
 			-- Throne of Four Winds
-			-- Wind Chill/Windkühle (Conclave of Wind)
-			{ spellID = 93123, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
-			-- Static Shock/Statischer Schock (Al'Akir)
-			{ spellID = 87873, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
-			-- Acid Rain/Säureregen (Al'Akir)
-			{ spellID = 88301, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Wind Chill (Conclave of Wind)
+			{ spellID = 93123, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Static Shock Schock (Al'Akir)
+			{ spellID = 87873, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
+			-- Acid Rain (Al'Akir)
+			{ spellID = 88301, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 		},
 		
 		{ -- PVP Target Buff
@@ -1378,7 +1387,7 @@ ns.Filger_Spells = {
 			{ slotID = 13, size = 32, filter = "CD" },
 			{ slotID = 14, size = 32, filter = "CD" },
 			
-			-- Goblin Rocket Jump 69070
+			-- Goblin Rocket Jump
 			{ spellID = 69070, size = 32, filter = "CD" },
 			
 			-- Saronite Bomb
