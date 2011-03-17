@@ -123,7 +123,7 @@ function Update(self)
 					bar.bg:Point("TOPLEFT", -2, 2)
 					bar.bg:Point("BOTTOMRIGHT", 2, -2)
 					bar.bg:SetFrameStrata("BACKGROUND")
-					bar.bg:SetTemplate(bar.bg)
+					bar.bg:SetTemplate("Default")
 				end
 
 				if (bar.background)then
