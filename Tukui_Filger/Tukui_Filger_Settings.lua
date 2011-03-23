@@ -234,6 +234,7 @@ ns.Filger_Spells = {
 			-- Impact
 			{ spellID = 12358, size = 47, unitId = "player", caster = "player", filter = "BUFF" },
 		},
+		
 		{
 			Name = "T_DEBUFF_ICON_BIG",
 			Direction = "RIGHT",
@@ -307,7 +308,6 @@ ns.Filger_Spells = {
 			
 			
 		},
-		
 	},
 	["WARRIOR"] = {
 		{
@@ -867,6 +867,7 @@ ns.Filger_Spells = {
 			Mode = "ICON",
 			setPoint = { "RIGHT", UIParent, "CENTER", -160, -139 },
 
+			-- TRINKETS
 			-- Witching Hour
 			{ spellID = 90887, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
 			-- Heart's Revelation
@@ -880,21 +881,9 @@ ns.Filger_Spells = {
 			-- Memory of Invincibility - Normal
 			{ spellID = 92213, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
 			
+			-- EXTERNAL BUFFS
 			-- Hand of Protection (Paladin)
 			{ spellID = 1022, size = 64, unitId = "player", caster = "all", filter = "BUFF" },
-
-			-- Hyperspeed Accelerators
-			{ spellID = 54758, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Synapse Springs
-			{ spellID = 82175, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
-
-			-- Speed
-			{ spellID = 53908, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Wild Magic
-			{ spellID = 53909, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
-			-- Earthen Potion
-			{ spellID = 58090, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
-
 			--Tricks of the Trade
 			{ spellID = 57934, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
 			--Power Infusion
@@ -907,10 +896,24 @@ ns.Filger_Spells = {
 			{ spellID = 80353, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
 			-- Pet Hero
 			{ spellID = 90355, size = 32, unitId = "player", caster = "all", filter = "BUFF" },
-						
+
+			-- TINKERS
+			-- Hyperspeed Accelerators
+			{ spellID = 54758, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Synapse Springs
+			{ spellID = 82175, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
+
+			--POTS
+			-- Speed
+			{ spellID = 53908, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Wild Magic
+			{ spellID = 53909, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
+			-- Earthen Potion
+			{ spellID = 79475, size = 32, unitId = "player", caster = "player", filter = "BUFF" },
+
 		},
-		{ -- PVP P Debuff
-			Name = "PVP_P_DEBUFF_ICON",
+		
+		{ 	Name = "PVP_P_DEBUFF_ICON",
 			Direction = "LEFT",
 			Interval = 4,
 			Mode = "ICON",
@@ -1138,12 +1141,12 @@ ns.Filger_Spells = {
 			-- War Stomp
 			{ spellID = 20549, size = 72, unitId = "player", caster = "all", filter = "DEBUFF" },
 		},
-		{ -- PVE Raid stuff
-			Name = "PVE_P_DEBUFF_ICON",
+		
+		{ 	Name = "PVE_P_DEBUFF_ICON",
 			Direction = "LEFT",
 			Interval = 4,
 			Mode = "ICON",
-			setPoint = { "RIGHT", UIParent, "CENTER", 0, 250 },
+			setPoint = { "RIGHT", UIParent, "CENTER", -250, 250 },
 			
 			-- CATA INSTANCES
 			
@@ -1269,6 +1272,9 @@ ns.Filger_Spells = {
 			{ spellID = 88942, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 
 			-- Bastion of Twilight
+			-- Malevolent Strikes (Halfus Wyrmbreaker)
+			{ spellID = 86158, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
+			
 			-- Blackout (Valiona & Theralion)
 			{ spellID = 92878, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Engulfing Magic (Valiona & Theralion)
@@ -1329,6 +1335,7 @@ ns.Filger_Spells = {
 			-- Throne of Four Winds
 			-- Wind Chill (Conclave of Wind)
 			{ spellID = 93123, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
+			
 			-- Static Shock Schock (Al'Akir)
 			{ spellID = 87873, size = 58, unitId = "player", caster = "all", filter = "DEBUFF" },
 			-- Acid Rain (Al'Akir)
@@ -1369,6 +1376,7 @@ ns.Filger_Spells = {
 			-- Grounding Totem Effect
 			{ spellID = 8178, size = 72, unitId = "target", caster = "all", filter = "BUFF" },
 		},
+		
 		{ -- CDs
 			Name = "P_COOLDOWNS_MEH",
 			Direction = "LEFT",
@@ -1430,6 +1438,5 @@ ns.Filger_Spells = {
 			-- Sap
 			{ spellID = 6770, size = 47, unitId = "target", caster = "all", filter = "DEBUFF" },		
 		},
-		
 	},
 }
